@@ -27,7 +27,8 @@ jobs:
           POSTGRES_DB: ${{ secrets.DB_NAME }}
           POSTGRES_USER: ${{ secrets.DB_USER }}
           POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
-
+        ports:
+          - 5432:5432
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
